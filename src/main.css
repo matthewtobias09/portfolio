@@ -1,0 +1,522 @@
+/** IMPORT FONTS **/
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@300&family=Patrick+Hand&family=Righteous&display=swap');
+
+/* 
+
+font-family: 'Neuton', serif; - FOR PARAGRAPH TEXT
+font-family: 'Patrick Hand', cursive; - FOR MARKUP
+font-family: 'Righteous', cursive; - FOR LOGOS
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    /** Set colors for the portfolio page **/
+
+    /** BACKGROUND COLORS **/
+    --dark: #1a1a1d;
+    --smoke: #4e4e50;
+
+    /** FONT & ELEMENT COLORS **/
+    --light: #fff;
+    --darkr: #6F2232;
+    --midr: #950740;
+    --lightr: #C3073F;
+}
+
+/** CSS SCALES FONT SO 1REM = 10PX **/
+html {
+    font-size: 62.5%; /** 1rem = 10px; 10px/16px = 62.5% **/
+}    
+
+footer { 
+    padding: 8rem;
+    background-color: #1a1a1d;
+    color: white;
+    text-align: center;
+}
+
+#logo {
+    height: 8rem;
+    margin: 3rem;
+}
+
+.splash {
+    height: 100vh;
+    background-color: #1a1a1d;
+
+    color: var(--light);
+    font-size: 2.5rem;
+    font-family: 'Righteous', cursive;
+
+}
+
+.splash-intro {
+    margin-left: 8rem;
+    margin-bottom: 20rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+
+    position: relative;
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    background-color:var(--lightr);
+    height: .3vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+nav ul li a:hover {
+    color: var(--lightr);
+}
+
+.splash-wrap {
+    display: flex;
+
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social {
+    padding-bottom: 20rem;
+}
+
+.sicon {
+    margin: 3rem;
+}
+
+.button {
+    width: 20rem;
+    height: 5.5rem;
+    background-color: var(--midr);
+    border-radius: 3rem;
+
+    text-align: center;
+    font-size: 3rem;
+
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+}
+
+.button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--lightr);
+}
+
+.button:active {
+    background-color: var(--darkr);
+    color: #1a1a1d;
+}
+
+/* BIO SECTION */
+
+.bio-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10rem;
+}
+
+.grid-container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 50% 50%; 
+    
+    gap: 20px 0px; 
+    justify-content: center; 
+    align-content: center; 
+  }
+
+.bio-desc { grid-area: 1 / 1 / 2 / 2; 
+    max-width: 100%;
+    justify-self: center; 
+    align-self: start; }
+
+.tools-desc { grid-area: 1 / 2 / 2 / 3; 
+    max-width: 100%;
+    justify-self: center; 
+    align-self: start; }
+
+.bio-desc > p {
+    font-family: 'Neuton', serif;
+    font-size: 3rem;
+    }
+
+#lang-text > p {
+    padding-top: 1rem;
+    font-family: 'Righteous', cursive;
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; 
+
+    align-items: end; 
+}
+
+.skills li { 
+    font-family: 'Neuton', serif;
+    text-align: center;
+    padding: 2rem;
+
+    font-size: 3rem;
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+} 
+
+.iconsize {
+    font-size: 4rem;
+}
+
+.info > p {
+    font-family: 'Neuton', serif;
+    font-size: 3.5rem;
+}
+
+.projects-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10rem;
+}
+
+
+
+#card-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+}
+
+.card {
+    width: 30rem;
+    height: 50rem;
+    box-shadow: 3px 3px 15px var(--smoke);
+    margin: 1rem;
+}
+
+.projText {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Neuton', serif;
+}
+
+.projImg {
+    margin-top: 2.5rem;
+    width: 25rem;
+    height: 20rem;
+    border-radius: 2rem;
+}
+
+.projLink {
+    font-size: 3rem;
+    color: var(--lightr);
+    text-decoration: none;
+
+    position: relative;
+}
+
+.projLink:after {
+    content: "";
+    position: absolute;
+    background-color:var(--lightr);
+    height: .3vh;
+    left: 0;
+    bottom: 0;
+    width: 100%;;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+.projLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.form-wrap {
+    font-family: 'Neuton', serif;
+    margin: 0 auto;
+    display: block; 
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.formg { 
+    position: relative; 
+    margin-bottom: 4.5rem; 
+}
+
+input {
+    font-size: 1.8rem;
+    padding: 1rem 1rem 1rem .5rem;
+    display: block;
+    width: 30rem;
+    border: none;
+    border-bottom:1px solid var(--lightr);
+  }
+
+input:focus { 
+    outline:none; 
+}
+
+label 				 {
+    color: #999; 
+    font-size: 1.8rem;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: .5rem;
+    top: 1rem;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top: -3rem;
+    font-size: 2rem;
+    color: var(--lightr);
+  }
+
+ 
+.bar { 
+    position: relative; 
+    display: block; 
+    width: 30rem; 
+}
+.bar:before, .bar:after {
+  content:'';
+  height:.2rem; 
+  width: 0;
+  bottom: .1rem; 
+  position: absolute;
+  background:#5264AE; 
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%; 
+}
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+
+.highlight {
+  position: absolute;
+  height: 60%; 
+  width: 10rem; 
+  top: 25%; 
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+.stylebutton {
+    width: 15rem;
+    height: 5rem;
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+}
+
+
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+hr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+
+    width: 50rem;
+    font-size: 3rem;
+}
+
+li {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 9rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 5.5rem;
+    font-family: 'Righteous', cursive;
+    color: var(--lightr);
+    text-shadow: 2px 2px 0px #000;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: 'Righteous', cursive;
+    color: var(--midr);
+    /* text-shadow: 2px 2px 0px #000; */
+}
+
+p {
+    margin: 0;
+}
+
+
+/** WEBSITE RESPONSIVE CODE FOR MOBILE & OTHER DEVICES **/
+
+/** It will be applied to BIG-DESKTOPS **/
+@media screen and (min-width: 1800px) {
+    html {
+    font-size: 75%; /** 1rem = 12px; 12px/16px = 75% **/
+    }
+}	
+
+
+/** It will be applied to TABLET-LANDSCAPE  **/
+@media screen and (max-width: 1200px) {
+    html {
+    font-size: 56.25%; /** 1rem = 9px; 9px/16px = 56.25% **/
+    }
+}
+  
+/** It will be applied to TABLET-PORTRAIT **/
+@media screen and (max-width: 900px) {
+    html {
+    font-size: 50%; /** 1rem = 8px; 8px/16px = 50% **/
+    }
+
+    #card-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bio-wrap {
+        padding: 1rem;
+    }
+
+    .skills li { 
+        font-size: 2.5rem;
+    } 
+
+    .minsize {
+        font-size: 2.25rem;
+    }
+    
+    .iconsize {
+        font-size: 2rem;
+    }
+    
+}
+
+/** It will be applied to PHONE **/
+@media screen and (max-width: 600px) {
+    html {
+    font-size: 37.5%; /** 1rem = 6px; 6px/16px = 37.5% **/
+    }
+
+    #card-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bio-wrap {
+        padding: 1rem;
+    }
+
+    .skills li { 
+        font-size: 2.25rem;
+
+    } 
+    
+    .minsize {
+        font-size: 2rem;
+    }
+    
+    .iconsize {
+        font-size: 1.75rem;
+    }
+}
